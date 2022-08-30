@@ -6,17 +6,19 @@ import Cv from "./cv/Cv";
 import Home from "./home/Home";
 import MyServices from "./myServices/MyServices";
 import Portfolio from "./portfolio/Portfolio";
+import { PathsMap } from "./routerPaths";
 
 const MainRouter = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/service" element={<MyServices />} />
-        <Route path="/cv" element={<Cv />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path={PathsMap.root.get()} element={<Home />} />
+        <Route path={PathsMap.home.get()} element={<Home />} />
+        <Route path={PathsMap.services.get()} element={<MyServices />} />
+        <Route path={PathsMap.cv.get()}element={<Cv />} />
+        <Route path={PathsMap.portfolio.get()} element={<Portfolio />} />
+        <Route path={PathsMap.blog.get()} element={<Blog />} />
+        <Route path={PathsMap.contact.get()} element={<Contact />} />
       </Routes>
     </>
   )
