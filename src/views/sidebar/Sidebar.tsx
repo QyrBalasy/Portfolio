@@ -1,15 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { PathsMap } from '../../routes/routerPaths'
 
 const Sidebar = () => {
   return (
-    <nav className='flex flex-col'>
-      <Link to="./home">Home</Link>
-      <Link to="./service">Service</Link>
-      <Link to="./cv">Cv</Link>
-      <Link to="./portfolio">Portfolio</Link>
-      <Link to="./blog">Blog</Link>
-      <Link to="./contact">Contact</Link>
+    <nav className="flex flex-col">
+      <Link to={PathsMap.home.get()}>Home</Link>
+      <Link to={PathsMap.services.get()}>Service</Link>
+      <Link to={PathsMap.cv.get()}>Cv</Link>
+      <Link to={PathsMap.portfolio.get()}>Portfolio</Link>
+      <Link to={PathsMap.blog.get()}>Blog</Link>
+      <Link to={PathsMap.contact.get()}>Contact</Link>
     </nav>
   )
 }
