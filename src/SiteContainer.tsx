@@ -6,8 +6,8 @@ import Sidebar from './views/sidebar/Sidebar'
 
 const SiteContainer = () => {
   return (
-    <div className="container bg-[#18191A]">
-      <div className="max-w-7xl mx-auto flex justify-between">
+    <div className="bg-[#18191A]">
+      <div className="container mx-auto flex justify-between gap-x-7">
         <Aside />
         <MainRouter />
         <Sidebar />

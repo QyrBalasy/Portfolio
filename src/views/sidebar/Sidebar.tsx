@@ -4,7 +4,7 @@ import { PathsMap } from '../../routes/routerPaths'
 
 const Sidebar = () => {
   return (
-    <nav className="flex flex-col">
+    <nav className="flex w-24 flex-col bg-darkView1 justify-center">
       <Link to={PathsMap.home.get()}>Home</Link>
       <Link to={PathsMap.services.get()}>Service</Link>
       <Link to={PathsMap.cv.get()}>Cv</Link>
