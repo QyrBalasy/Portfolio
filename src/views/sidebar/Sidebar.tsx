@@ -3,6 +3,9 @@ import {NavLink} from 'react-router-dom'
 import {BriefcaseIcon, CodeIcon, CommentsIcon, GraduationCapIcon, HomeIcon, PenIcon} from '../../assets/icons/Icons'
 import {ToggleSwitch} from '../../components/UI/switch'
 import {PathsMap} from '../../routes/routerPaths'
+import styled from 'styled-components'
+import { Tooltip } from '../../components/UI/tooltip'
+
 
 type SidebarDataT = {
   title: string
@@ -34,7 +37,7 @@ const Sidebar = () => {
     },
     {
       title: 'Blog',
-      path: PathsMap.home.get(),
+      path: PathsMap.blog.get(),
       icon: <PenIcon className="h-10 w-10 rounded-[50%] bg-yellow p-2" />,
     },
     {
@@ -44,19 +47,29 @@ const Sidebar = () => {
     },
   ]
   return (
-    <div className="flex flex-col justify-center bg-darkView1">
-      <ToggleSwitch />
-      <nav className="flex w-24 flex-col items-center justify-center gap-10">
-        {SidebarData.map((items, index) => {
-          return (
-            <ul key={index}>
-              <NavLink to={items.path}>
-                {items.icon}
-                {items.title}
-              </NavLink>
-            </ul>
-          )
-        })}
+    <div className="flex  h-screen flex-col justify-center bg-darkView1 py-12">
+      <div className="mx-auto grow-[1]">
+        <ToggleSwitch />
+      </div>
+      <nav className="grow-[2]">
+        <ul className="flex w-28 flex-col gap-10 ">
+          {SidebarData.map((items, index) => {
+            return (
+              <li key={index}>
+                <NavLink
+                  to={items.path}
+                  className="flex w-full flex-col items-center justify-center text-center"
+                  style={({isActive}) => ({
+                    color: isActive ? 'green' : 'blue',
+                  })}>
+                  {items.icon}
+                  {/* {items.title} */}
+                  {/* <Tooltip position="top">{items.title}</Tooltip> */}
+                </NavLink>
+              </li>
+            )
+          })}
+        </ul>
       </nav>
     </div>
   )
