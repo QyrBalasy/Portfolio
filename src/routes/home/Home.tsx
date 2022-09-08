@@ -2,7 +2,7 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div className="flex">
+    <section>
       <div>
         <h1 className="text-5xl">
           Rayan Adlrdard
@@ -19,7 +19,7 @@ const Home = () => {
         </button>
       </div>
       <div>image is here</div>
-    </div>
+    </section>
   )
 }
 export default Home
