@@ -6,12 +6,17 @@ import {Button} from '../../components/UI/buttons'
 import {DownloadIcon} from '../../assets/icons/Icons'
 import {Scrollbars} from 'react-custom-scrollbars-2'
 
+//context
+
 const Aside = () => {
   return (
     <aside className=" h-screen w-[305px] bg-darkView1 px-10">
       <Profile />
       {/* <div className="hideScroll mb-6 h-[calc(100vh-450px)] overflow-x-hidden overflow-y-scroll"> */}
-      <Scrollbars style={{height: 300}}>
+      <Scrollbars
+        renderThumbVertical={props => <div {...props} className="mr-2 rounded-lg bg-yellow" />}
+        style={{height: 350}}
+        thumbSize={50}>
         <hr className="h-px w-full border-none bg-darkView2" />
         <About />
         <hr className="h-px w-full border-none bg-darkView2" />
