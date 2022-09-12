@@ -2,11 +2,11 @@ import styled from 'styled-components'
 
 export const Badge = styled.div`
   display: inline-block;
-  padding: 6px 8px;
-  border-radius: 3px;
-  background-color: #587992;
-  font-size: 13px;
-  line-height: 18px;
-  font-weight: 600;
+  padding: 3px 5px;
+  background-color: #ffb400;
+  font-size: 15px;
+  line-height: 17px;
+  font-weight: 400;
   color: #ffffff;
 `
+

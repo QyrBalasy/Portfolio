@@ -2,11 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   list-style-type: none;
-  color: #fff; 
+  color: #fff;
   font-family: 'Inter', sans-serif;
+}
+
+//TODO: кастомный скролл сделать надо
+.hideScroll {
+  scrollbar-width: none;
 }
