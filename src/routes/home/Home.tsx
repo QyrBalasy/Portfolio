@@ -2,6 +2,7 @@ import React from 'react'
 import Footer from '../../components/footer'
 import HomePage from '../../pages/HomePage'
 import PricePlans from '../../pages/PricePlans'
+import Recomendations from '../../pages/Recomendations'
 import Services from '../../pages/Services'
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
       <HomePage />
       <Services />
       <PricePlans />
+      <Recomendations />
       <Footer/>
     </div>
   )
