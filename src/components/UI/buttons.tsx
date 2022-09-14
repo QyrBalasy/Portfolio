@@ -19,4 +19,10 @@ export const Button = styled.button<ButtonProps>`
     css`
       padding: 8px 32px;
     `};
+  ${props =>
+    props.color === 'secondary' &&
+    css`
+      padding: 8px 32px;
+      border-radius: 30px;
+    `};
 `
