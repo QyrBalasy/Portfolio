@@ -18,6 +18,13 @@ module.exports = {
           lineHeight: '36px',
         },
       ],
+      headline2XL: [
+        '24px',
+        {
+          fontWeight: 700,
+          lineHeight: '32px',
+        },
+      ],
       headlineLG: [
         '18px',
         {
@@ -35,6 +42,7 @@ module.exports = {
     },
     colors: {
       white: '#ffff',
+      whiteFont: '#FAFAFA',
       silver: '#E4E6EB',
       lightBg: '#F0F0F6',
       paragraphFont: '#767676',
@@ -46,4 +54,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};
