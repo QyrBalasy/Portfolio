@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../../components/footer'
 import HomePage from '../../pages/HomePage'
 import PricePlans from '../../pages/PricePlans'
 import Services from '../../pages/Services'
@@ -9,6 +10,7 @@ const Home = () => {
       <HomePage />
       <Services />
       <PricePlans />
+      <Footer/>
     </div>
   )
 }
