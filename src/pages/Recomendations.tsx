@@ -11,7 +11,7 @@ import { StarIcon } from '../assets/icons/Icons'
 const Recomendations = () => {
   return (
     <section>
-      <div className="flex flex-col gap-y-12 ">
+      <div className="max-w-5xl flex flex-col gap-y-12 ">
         <div className="mx-auto w-96 text-center ">
           <h2 className="text-headline3XL">Recomendations</h2>
           <p className="mt-6">
@@ -21,8 +21,6 @@ const Recomendations = () => {
         </div>
         <SwiperSliderComponent />
       </div>
-
-      {/* <RecomendationItems /> */}
     </section>
   )
 }
@@ -30,14 +28,14 @@ export default Recomendations
 
 const SwiperSliderComponent = () => {
   return (
-    <div className='container'>
+    <div>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={50}
         slidesPerView={1}
-        navigation
-        pagination={{clickable: true}}
-        scrollbar={{draggable: true}}
+        pagination
+        
+        className={'h-[370px]'}
         onSlideChange={() => console.log('slider changed')}
         onSwiper={swiper => console.log(swiper)}>
         <SwiperSlide>
@@ -59,7 +57,7 @@ const SwiperSliderComponent = () => {
 
 const RecomendationItems = () => {
   return (
-    <div className="flex w-full justify-center gap-4">
+    <div className="flex w-full justify-between gap-4 h-[320px]">
       <div className="flex w-80 flex-col justify-center gap-4 bg-darkView1 px-6 py-4">
         <StarRecomendations />
         <h4>Great Quality!</h4>
