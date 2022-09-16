@@ -47,30 +47,32 @@ const Sidebar = () => {
     },
   ]
   return (
-    <div className="flex  h-screen flex-col justify-center bg-darkView1 py-12">
-      <div className="mx-auto grow-[1]">
-        <ToggleSwitch />
+    <div className="bg-darkView1 pt-[52px]">
+      <div className="sticky top-0 flex h-screen flex-col justify-center py-12">
+        <div className="w-28 py-5 px-0">
+          <ToggleSwitch />
+        </div>
+        <nav>
+          <ul className="flex w-28 flex-col gap-10 ">
+            {SidebarData.map((items, index) => {
+              return (
+                <li key={index}>
+                  <NavLink
+                    to={items.path}
+                    className="flex w-full flex-col items-center justify-center text-center"
+                    style={({isActive}) => ({
+                      color: isActive ? 'green' : 'blue',
+                    })}>
+                    {items.icon}
+                    {/* {items.title} */}
+                    {/* <Tooltip position="top">{items.title}</Tooltip> */}
+                  </NavLink>
+                </li>
+              )
+            })}
+          </ul>
+        </nav>
       </div>
-      <nav className="grow-[2]">
-        <ul className="flex w-28 flex-col gap-10 ">
-          {SidebarData.map((items, index) => {
-            return (
-              <li key={index}>
-                <NavLink
-                  to={items.path}
-                  className="flex w-full flex-col items-center justify-center text-center"
-                  style={({isActive}) => ({
-                    color: isActive ? 'green' : 'blue',
-                  })}>
-                  {items.icon}
-                  {/* {items.title} */}
-                  {/* <Tooltip position="top">{items.title}</Tooltip> */}
-                </NavLink>
-              </li>
-            )
-          })}
-        </ul>
-      </nav>
     </div>
   )
 }

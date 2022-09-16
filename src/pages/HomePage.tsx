@@ -4,7 +4,7 @@ import basicImg from '../media/imgs/man-img.png'
  
 const HomePage = () => {
   return (
-    <section className="container bg-darkView1 px-14">
+    <section className="bg-darkView1 px-14">
       <div className="flex justify-between gap-5">
         <article className="flex flex-col gap-5 self-center basis-2/3">
           <h1 className="text-headline5XL">
