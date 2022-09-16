@@ -13,7 +13,7 @@ const About = () => {
     currentAge = currentAge - 1
   }
   return (
-    <div className="flex flex-col gap-y-2.5 my-6">
+    <div className="my-6 flex flex-col gap-y-2.5">
       <div className="flex justify-between">
         <Badge>age:</Badge>
         <span>{currentAge}</span>
@@ -28,7 +28,7 @@ const About = () => {
       </div>
       <div className="flex justify-between whitespace-nowrap">
         <Badge>Address:</Badge>
-        <span>Kazakhstan, Almaty</span>
+        <a href="https://goo.gl/maps/PqnuS8gEGmBwtuVY8" target={"_blank"} rel="noreferrer">Almaty</a>
       </div>
     </div>
   )
