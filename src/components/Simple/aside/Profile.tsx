@@ -7,15 +7,17 @@ import {
   TelegramIcon,
   YoutubeIcon,
 } from '../../../assets/icons/Icons'
+import profileImg from '../../../media/imgs/profileIcon.jpg'
+
 
 const Profile = () => {
   return (
-    <div className="mb-6">
+    <div>
       <div className="xs:h-[150px] bg-stone-400 mx-auto mt-12 mb-7 w-[150px] overflow-hidden rounded-[50%] text-center">
-        <img alt="profile icon" src="http://dummyimage.com/150x150/c0c0c0" />
+        <img alt="profile icon" src={profileImg} />
       </div>
-      <h4 className="mb-4 text-center text-lg font-medium text-white">Sungat Shakarim</h4>
-      <p className="text-mainTextColor mb-4 text-center text-base font-normal text-paragraphFont">Font-end Developer</p>
+      <h4 className="text-lg mb-4 text-center font-medium text-white">Sungat Shakarim</h4>
+      <p className="text-mainTextColor text-base mb-4 text-center font-normal text-paragraphFont">Font-end Developer</p>
       <ul className="flex justify-between  ">
         <li className="flex h-6 w-6 items-center justify-center rounded-[50%] bg-yellow  ">
           <a href="/#">
