@@ -2,20 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  box-sizing: border-box;
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
-  list-style-type: none;
-  color: #fff;
-  font-family: 'Inter', sans-serif;
+  border: none;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
-  background-color: #18191A;
+  background-color: #18191a;
+  font-family: 'Inter', sans-serif;
+  color: #fafafa;
 }
 
-p{
+a {
+  text-decoration: none;
+}
+
+
+p {
   font-size: 16px;
   color: #767676;
 }
