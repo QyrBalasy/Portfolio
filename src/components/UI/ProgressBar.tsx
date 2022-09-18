@@ -11,23 +11,29 @@ const ProgressbarStyled = styled.div`
   width: ${(p: ProgressbarStyledType) => p.width}%;
 `
 
-type ProgressBarDataType = {
+export type ProgressBarDataType = {
   Title: string
-  completed: string
-  fill: string
+  Content: {
+    description: string
+    completed: string
+    fill: string
+  }[]
 }
 
-const ProgressBar: FC<ProgressBarDataType> = ({Title, completed, fill}) => {
+const ProgressBar: FC<{Item:ProgressBarDataType}> = ({Item}) => {
   return (
-    <>
-      <li>
-        <p className="float-left text-whiteFont">{Title}</p>
-        <p className="text-right text-whiteFont">{completed}</p>
-        <div className="mt-[5px] h-[9px] w-full rounded border border-yellow bg-lightDark p-[3px]">
-          <ProgressbarStyled width={fill} />
-        </div>
-      </li>
-    </>
+    <ul className="mt-6">
+      <h4 className="mb-4 text-headlineLG">{Item.Title}</h4>
+      {Item.Content.map((elem, index) => (
+        <li key={index}>
+          <p className="float-left text-whiteFont">{elem.description}</p>
+          <p className="text-right text-whiteFont">{elem.completed}%</p>
+          <div className="mt-[5px] h-[9px] w-full rounded border border-solid border-yellow p-[3px]">
+            <ProgressbarStyled width={elem.fill} />
+          </div>
+        </li>
+      ))}
+    </ul>
   )
 }
 
