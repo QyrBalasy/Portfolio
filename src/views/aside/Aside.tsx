@@ -1,7 +1,7 @@
 import React from 'react'
 import Profile from '../../components/Simple/aside/Profile'
 import About from '../../components/Simple/aside/About'
-import Skills from '../../components/Simple/aside/Skills'
+import Skills, { ExtraSkills } from '../../components/Simple/aside/Skills'
 import {Button} from '../../components/UI/buttons'
 import {DownloadIcon} from '../../assets/icons/Icons'
 import {Scrollbars} from 'react-custom-scrollbars-2'
@@ -23,15 +23,11 @@ const Aside = () => {
           <About />
           <hr className="h-px w-full border-none bg-darkView2" />
           <Skills />
-          {/* <hr className="h-px w-full border-none bg-darkView2" />
-          <HardSkills />
-          <hr className="h-px w-full border-none bg-darkView2" />
+          <hr className="mt-6 h-px w-full border-none bg-darkView2" />
           <ExtraSkills />
-          <hr className="h-px w-full border-none bg-darkView2" /> */}
+          <hr className="mt-6 h-px w-full border-none bg-darkView2" />
         </Scrollbars>
-
         {/* </div> */}
-
         <Button>
           Download cv
           <DownloadIcon className="h-3 w-3" />
