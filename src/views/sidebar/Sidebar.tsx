@@ -3,8 +3,9 @@ import {NavLink} from 'react-router-dom'
 import {BriefcaseIcon, CodeIcon, CommentsIcon, GraduationCapIcon, HomeIcon, PenIcon} from '../../assets/icons/Icons'
 import {ToggleSwitch} from '../../components/UI/switch'
 import {PathsMap} from '../../routes/routerPaths'
-import styled from 'styled-components'
-import { Tooltip } from '../../components/UI/tooltip'
+import ThemeContext from '../../context/ThemeContext'
+// import styled from 'styled-components'
+// import { Tooltip } from '../../components/UI/tooltip'
 
 
 type SidebarDataT = {
@@ -46,11 +47,12 @@ const Sidebar = () => {
       icon: <CommentsIcon className="h-10 w-10 rounded-[50%] bg-yellow p-2" />,
     },
   ]
+  const {currentTheme, changeCurrentTheme} = React.useContext(ThemeContext)
   return (
     <div className="bg-darkView1 pt-[52px]">
       <div className="sticky top-0 flex h-screen flex-col justify-center py-12">
         <div className="w-28 py-5 px-0">
-          <ToggleSwitch />
+          <ToggleSwitch onClick={() => changeCurrentTheme(currentTheme === 'light' ? 'dark' : 'light')} />
         </div>
         <nav>
           <ul className="flex w-28 flex-col gap-10 ">
@@ -77,3 +79,5 @@ const Sidebar = () => {
   )
 }
 export default Sidebar
+
+
