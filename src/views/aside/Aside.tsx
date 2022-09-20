@@ -6,7 +6,6 @@ import {Button} from '../../components/UI/buttons'
 import {DownloadIcon} from '../../assets/icons/Icons'
 import {Scrollbars} from 'react-custom-scrollbars-2'
 
-//context
 
 const Aside = () => {
   return (
