@@ -36,3 +36,8 @@ p {
 .hideScroll {
   scrollbar-width: none;
 }
+//TODO: нормально стили надо для карты прописать чтобы не были в индексе
+.containerStyle{
+  width: 100%;
+  height: 400px;
+}
