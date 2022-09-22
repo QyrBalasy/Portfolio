@@ -1,23 +1,11 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
-type ToggleSwitchProps = {
-  green?: boolean
-}
-
-export const ToggleSwitch = styled.input.attrs({type: 'checkbox'})<ToggleSwitchProps>`
+export const ToggleSwitch = styled.input.attrs({type: 'checkbox'})`
   position: relative;
   padding: 0;
   width: 40px;
   height: 24px;
-
-  ${props =>
-    props.green
-      ? css`
-          background-color: #249508;
-        `
-      : css`
-          background-color: #005da1;
-        `}
+  background-color: #005da1;
   border-radius: 12px;
   border: 1px solid #e8ecee;
   -webkit-appearance: none;
@@ -25,7 +13,6 @@ export const ToggleSwitch = styled.input.attrs({type: 'checkbox'})<ToggleSwitchP
   appearance: none;
   transition: 0.3s;
   cursor: pointer;
-  margin-right: 5px;
   &:disabled {
     background-color: #e8ecee;
   }
@@ -40,6 +27,9 @@ export const ToggleSwitch = styled.input.attrs({type: 'checkbox'})<ToggleSwitchP
     top: 2px;
     left: 1px;
     transition: all 0.5s;
+  }
+  &:checked {
+    background-color: #e8ecee;
   }
   &:checked::after {
     left: 19px;
