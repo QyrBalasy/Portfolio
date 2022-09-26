@@ -1,84 +1,120 @@
 import React from 'react'
+import {CloneIcon} from '../../../assets/icons/Icons'
+import ProgressBar, {ProgressBarDataType} from '../../UI/ProgressBar'
 
-const SoftSkills = () => {
-  const kzLang = 100,
-    ruLang = 100
-  const engLang = 60
+const ProgressBarData: ProgressBarDataType[] = [
+  {
+    Title: 'Soft Skills',
+    Content: [
+      {
+        description: 'Kazakh',
+        fill: '100',
+        completed: '100',
+      },
+      {
+        description: 'Russian',
+        fill: '100',
+        completed: '100',
+      },
+      {
+        description: 'English',
+        fill: '60',
+        completed: '60',
+      },
+    ],
+  },
+  {
+    Title: 'Hard Skills',
+    Content: [
+      {
+        description: 'Html',
+        fill: '100',
+        completed: '100',
+      },
+      {
+        description: 'CSS',
+        fill: '100',
+        completed: '100',
+      },
+      {
+        description: 'Js',
+        fill: '90',
+        completed: '90',
+      },
+      {
+        description: 'React',
+        fill: '40',
+        completed: '40',
+      },
+      {
+        description: 'PHP',
+        fill: '30',
+        completed: '30',
+      },
+      {
+        description: 'CMS WordPress',
+        fill: '70',
+        completed: '70',
+      },
+      {
+        description: 'CMS Open-Card',
+        fill: '70',
+        completed: '70',
+      },
+      {
+        description: 'CMS Bitrix',
+        fill: '80',
+        completed: '80',
+      },
+    ],
+  },
+]
+
+const Skills = () => {
   return (
-    <div className='my-6'>
-      <ul>
-        <h4>Languages</h4>
-        <li className="grid grid-cols-2">
-          <p>Kazakh</p>
-          <p className="text-right">{kzLang}%</p>
-          <span className="col-span-2 h-2  w-full rounded border border-yellow bg-lightDark"></span>
-        </li>
-        <li className="grid grid-cols-2">
-          <p>Russian</p>
-          <p className="text-right">{ruLang}%</p>
-          <span className="col-span-2 h-2  w-full rounded border border-yellow bg-lightDark"></span>
-        </li>
-        <li className="grid grid-cols-2">
-          <p>English</p>
-          <p className="text-right">{engLang}%</p>
-          <span className="col-span-2 h-2  w-full rounded border border-yellow bg-lightDark"></span>
-        </li>
-      </ul>
+    <div>
+      {ProgressBarData.map((item, index) => {
+        if (item.Title === 'Soft Skills') {
+          return (
+            <>
+              <ProgressBar key={index} Item={item} />
+              <hr className="mt-6 h-px w-full border-none bg-lightBg" />
+            </>
+          )
+        }
+        return <ProgressBar key={index} Item={item} />
+      })}
     </div>
   )
 }
-export default SoftSkills
-
-export const HardSkills = () => {
-  const kzLang = 100,
-    ruLang = 100
-  const engLang = 60
-  return (
-    <div className="my-6">
-      <ul>
-        <h4>HardSkills</h4>
-        <li className="grid grid-cols-2">
-          <p>Html</p>
-          <p className="text-right">{kzLang}%</p>
-          <span className="col-span-2 h-2  w-full rounded border border-yellow bg-lightDark"></span>
-        </li>
-        <li className="grid grid-cols-2">
-          <p>CSS</p>
-          <p className="text-right">{ruLang}%</p>
-          <span className="col-span-2 h-2  w-full rounded border border-yellow bg-lightDark"></span>
-        </li>
-        <li className="grid grid-cols-2">
-          <p>Js</p>
-          <p className="text-right">{engLang}%</p>
-          <span className="col-span-2 h-2  w-full rounded border border-yellow bg-lightDark"></span>
-        </li>
-        <li className="grid grid-cols-2">
-          <p>Php</p>
-          <p className="text-right">{engLang}%</p>
-          <span className="col-span-2 h-2  w-full rounded border border-yellow bg-lightDark"></span>
-        </li>
-        <li className="grid grid-cols-2">
-          <p>Wordpress</p>
-          <p className="text-right">{engLang}%</p>
-          <span className="col-span-2 h-2  w-full rounded border border-yellow bg-lightDark"></span>
-        </li>
-      </ul>
-    </div>
-  )
-}
+export default Skills
 
 export const ExtraSkills = () => {
-  const kzLang = 100,
-    ruLang = 100
-  const engLang = 60
   return (
     <div className="my-6">
       <ul>
-        <h4>Extra Skills</h4>
-        <li>Bootstrap, Materialize</li>
-        <li>Stylus, Sass, Less</li>
-        <li>Gulp, Webpack, Grunt</li>
-        <li>GIT Knowledge</li>
+        <h4 className="darkMode-text mb-4 text-headlineLG">Extra Skills</h4>
+        {/* Эту хуету переписать надо */}
+        <li className="flex items-center justify-start gap-x-4">
+          <CloneIcon className="h-4 w-4" />
+          <p className="text-paragraphFont dark:text-whiteFont">Bootstrap, Materialize</p>
+        </li>
+        <li className="flex items-center justify-start  gap-x-4">
+          <CloneIcon className="h-4 w-4" />
+          <p className="text-paragraphFont dark:text-whiteFont">Sass, Less, Tailwind</p>
+        </li>
+        <li className="flex items-center justify-start  gap-x-4">
+          <CloneIcon className="h-4 w-4" />
+          <p className="text-paragraphFont dark:text-whiteFont">Gulp, Webpack</p>
+        </li>
+        <li className="flex items-center justify-start  gap-x-4">
+          <CloneIcon className="h-4 w-4" />
+          <p className="text-paragraphFont dark:text-whiteFont">GIT Knowledge</p>
+        </li>
+        <li className="flex items-center justify-start  gap-x-4">
+          <CloneIcon className="h-4 w-4" />
+          <p className="text-paragraphFont dark:text-whiteFont">Figma, Adobe (Ps,Ae,Pp)</p>
+        </li>
       </ul>
     </div>
   )

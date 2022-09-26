@@ -1,10 +1,13 @@
 import React from "react";
+import Footer from "../../components/footer";
+import MyPortfolios from "../../pages/MyPortfolios";
 
 const Portfolio = () => {
   return (
-    <section>
-      Portfolio is here
-    </section>
+    <>
+      <MyPortfolios />
+      <Footer />
+    </>
   )
 }
 export default Portfolio

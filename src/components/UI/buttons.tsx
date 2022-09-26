@@ -14,9 +14,18 @@ export const Button = styled.button<ButtonProps>`
   align-items: center;
   gap: 15px;
   justify-content: center;
+  font-size:14px;
+  font-weight: 600;
+  line-height: 17px;
   ${props =>
     props.color === 'primary' &&
     css`
       padding: 8px 32px;
+    `};
+  ${props =>
+    props.color === 'secondary' &&
+    css`
+      padding: 8px 32px;
+      border-radius: 30px;
     `};
 `

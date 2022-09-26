@@ -11,10 +11,9 @@ import { PathsMap } from "./routerPaths";
 
 const MainRouter = () => {
   return (
-    <main>
+    <main className="max-w-5xl">
       <Routes>
         <Route path={PathsMap.root.get()} element={<Home />} />
-        <Route path={PathsMap.home.get()} element={<Home />} />
         <Route path={PathsMap.services.get()} element={<MyServices />} />
         <Route path={PathsMap.cv.get()} element={<Cv />} />
         <Route path={PathsMap.portfolio.get()} element={<Portfolio />} />
