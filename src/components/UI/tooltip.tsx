@@ -9,6 +9,7 @@ const TooltipStyled = styled.div`
   & > span {
     position: absolute;
     background-color: #fafafa;
+    box-shadow: 0 3px 6px 0 #3d49551a;
     top: -16px;
     left: 50%;
     transform: translateX(-50%) translateY(-100%);
@@ -41,6 +42,7 @@ const TooltipStyled = styled.div`
 type TooltipProps = {
   content: string
   children?: ReactNode
+  className?: string
 
 }
 

@@ -43,6 +43,7 @@ module.exports = {
     colors: {
       white: '#ffff',
       whiteFont: '#FAFAFA',
+      darkFont: '#767676',
       silver: '#E4E6EB',
       lightBg: '#F0F0F6',
       paragraphFont: '#767676',

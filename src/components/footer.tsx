@@ -1,10 +1,12 @@
-import React from "react";
-import { CopyrightIcon } from "../assets/icons/Icons";
+import React from 'react'
+import {CopyrightIcon} from '../assets/icons/Icons'
+import ContactForm from './Simple/footer/ContactForm'
 import MyLocation from './Simple/footer/MyLocation'
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="flex flex-col gap-y-16">
+      <ContactForm />
       <MyLocation />
       <div className="flex items-center justify-center gap-4 bg-darkView1 py-5">
         <CopyrightIcon className="h-5 w-5" />
