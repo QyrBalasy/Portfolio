@@ -1,5 +1,4 @@
 import React from "react";
-import { Badge } from "../../UI/text";
 
 const About = () => {
   let now = new Date()
@@ -15,20 +14,22 @@ const About = () => {
   return (
     <div className="my-6 flex flex-col gap-y-2.5">
       <div className="flex justify-between">
-        <Badge>age:</Badge>
-        <span>{currentAge}</span>
+        <p className="darkMode-text bg-yellow px-2 py-0.5 text-default">Age:</p>
+        <span className="darkMode-text">{currentAge}</span>
       </div>
       <div className="flex justify-between">
-        <Badge>Residence:</Badge>
-        <span>KZ</span>
+        <p className="darkMode-text bg-yellow px-2 py-0.5 text-default">Residence:</p>
+        <span className="darkMode-text">KZ</span>
       </div>
       <div className="flex justify-between">
-        <Badge>Freelance:</Badge>
-        <span>Available</span>
+        <p className="darkMode-text bg-yellow px-2 py-0.5 text-default">Freelance:</p>
+        <span className="darkMode-text">Available</span>
       </div>
       <div className="flex justify-between whitespace-nowrap">
-        <Badge>Address:</Badge>
-        <a href="https://goo.gl/maps/PqnuS8gEGmBwtuVY8" target={"_blank"} rel="noreferrer">Almaty</a>
+        <p className="darkMode-text bg-yellow px-2 py-0.5 text-default">Address:</p>
+        <a href="https://goo.gl/maps/PqnuS8gEGmBwtuVY8" target={'_blank'} rel="noreferrer" className="darkMode-text">
+          Almaty
+        </a>
       </div>
     </div>
   )

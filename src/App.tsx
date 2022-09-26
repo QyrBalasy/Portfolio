@@ -1,12 +1,16 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
+import ThemeContextWrapper from "./context/ThemeContextWrapper";
 import SiteContainer from "./SiteContainer";
+
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <SiteContainer/>
-    </BrowserRouter>
+    <ThemeContextWrapper>
+      <BrowserRouter>
+        <SiteContainer />
+      </BrowserRouter>
+    </ThemeContextWrapper>
   )
 }
 export default App

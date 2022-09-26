@@ -5,10 +5,12 @@ import Sidebar from './views/sidebar/Sidebar'
 
 const SiteContainer = () => {
   return (
-    <div className="container mx-auto flex justify-between gap-x-7">
-      <Aside />
-      <MainRouter />
-      <Sidebar />
+    <div className="bg-lightBg dark:bg-darkBg">
+      <div className="container mx-auto flex justify-between gap-x-7 ">
+        <Aside />
+        <MainRouter />
+        <Sidebar />
+      </div>
     </div>
   )
 }

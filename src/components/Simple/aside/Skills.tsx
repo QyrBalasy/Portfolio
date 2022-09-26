@@ -1,4 +1,5 @@
 import React from 'react'
+import {CloneIcon} from '../../../assets/icons/Icons'
 import ProgressBar, {ProgressBarDataType} from '../../UI/ProgressBar'
 
 const ProgressBarData: ProgressBarDataType[] = [
@@ -77,10 +78,11 @@ const Skills = () => {
           return (
             <>
               <ProgressBar key={index} Item={item} />
-              <hr className="h-px w-full border-none bg-darkView2 mt-6" />
+              <hr className="mt-6 h-px w-full border-none bg-lightBg" />
             </>
           )
-        } return <ProgressBar key={index} Item={item} />
+        }
+        return <ProgressBar key={index} Item={item} />
       })}
     </div>
   )
@@ -90,13 +92,29 @@ export default Skills
 export const ExtraSkills = () => {
   return (
     <div className="my-6">
-      <ul className="list-inside list-disc">
-        <h4 className="mb-4 text-headlineLG">Extra Skills</h4>
-        <li>Bootstrap, Materialize</li>
-        <li>Sass, Less, Tailwind</li>
-        <li>Gulp, Webpack</li>
-        <li>GIT Knowledge</li>
-        <li>Figma, Photoshop, Premiere Pro</li>
+      <ul>
+        <h4 className="darkMode-text mb-4 text-headlineLG">Extra Skills</h4>
+        {/* Эту хуету переписать надо */}
+        <li className="flex items-center justify-start gap-x-4">
+          <CloneIcon className="h-4 w-4" />
+          <p className="text-paragraphFont dark:text-whiteFont">Bootstrap, Materialize</p>
+        </li>
+        <li className="flex items-center justify-start  gap-x-4">
+          <CloneIcon className="h-4 w-4" />
+          <p className="text-paragraphFont dark:text-whiteFont">Sass, Less, Tailwind</p>
+        </li>
+        <li className="flex items-center justify-start  gap-x-4">
+          <CloneIcon className="h-4 w-4" />
+          <p className="text-paragraphFont dark:text-whiteFont">Gulp, Webpack</p>
+        </li>
+        <li className="flex items-center justify-start  gap-x-4">
+          <CloneIcon className="h-4 w-4" />
+          <p className="text-paragraphFont dark:text-whiteFont">GIT Knowledge</p>
+        </li>
+        <li className="flex items-center justify-start  gap-x-4">
+          <CloneIcon className="h-4 w-4" />
+          <p className="text-paragraphFont dark:text-whiteFont">Figma, Adobe (Ps,Ae,Pp)</p>
+        </li>
       </ul>
     </div>
   )

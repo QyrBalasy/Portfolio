@@ -2,9 +2,6 @@ export namespace PathsMap {
   export const root = {
     get: () => '/',
   }
-  export const home = {
-    get: () => '/home',
-  }
   export const services = {
     get: () => '/service',
   }

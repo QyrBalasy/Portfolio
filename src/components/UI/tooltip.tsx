@@ -1,38 +1,59 @@
-import styled, { css } from "styled-components";
+import React, { FC, ReactNode } from "react";
+import styled from 'styled-components'
 
-type tooltipProps ={
-  position: 'top' | 'right' | 'bottom' | 'left'
+const TooltipStyled = styled.div`
+  position: relative;
+  &:hover > span {
+    visibility: visible;
+  }
+  & > span {
+    position: absolute;
+    background-color: #fafafa;
+    box-shadow: 0 3px 6px 0 #3d49551a;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+    padding: 3px 10px;
+    border-radius: 5px;
+    text-align: center;
+    min-width: max-content;
+    visibility: hidden;
+  }
+  & > span:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: calc(50% - 8px);
+    top: 100%;
+    border-top: 10px solid #fafafa;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 1px solid transparent;
+  }
+  & > span > p {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+    color: #2b2b2b;
+  }
+`
+
+type TooltipProps = {
+  content: string
+  children?: ReactNode
+  className?: string
+
 }
 
-export const Tooltip = styled.div<tooltipProps>`
-  padding: 6px 15px;
-  background-color: #fff;
-  font-size: 12px;
-  line-height: 15px;
-  font-weight: 500;
-  color: #2b2b2b;
-  ${props =>
-    props.position === 'top' &&
-    css`
-      position: absolute;
-      top: 0;
-    `};
-  ${props =>
-    props.position === 'right' &&
-    css`
-      position: absolute;
-      right: 0;
-    `};
-  ${props =>
-    props.position === 'bottom' &&
-    css`
-      position: absolute;
-      bottom: 0;
-    `};
-  ${props =>
-    props.position === 'left' &&
-    css`
-      position: absolute;
-      left: 0;
-    `};
-`
+const Tooltip:FC<TooltipProps> = ({content, children}) => {
+  return (
+    <TooltipStyled>
+      <span>
+        <p>{content}</p>
+      </span>
+      {children}
+    </TooltipStyled>
+  )
+}
+export default Tooltip
