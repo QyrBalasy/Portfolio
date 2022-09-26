@@ -6,9 +6,6 @@ import {PathsMap} from '../../routes/routerPaths'
 import ThemeContext from '../../context/ThemeContext'
 import Tooltip from '../../components/UI/tooltip'
 
-
-
-
 type SidebarDataT = {
   title: string
   path: string
@@ -19,7 +16,7 @@ const Sidebar = () => {
   const SidebarData: SidebarDataT[] = [
     {
       title: 'Home',
-      path: PathsMap.home.get(),
+      path: PathsMap.root.get(),
       icon: <HomeIcon className="h-8 w-8 p-2" />,
     },
     {
@@ -50,7 +47,7 @@ const Sidebar = () => {
   ]
   const {currentTheme, changeCurrentTheme} = React.useContext(ThemeContext)
   return (
-    <div className="bg-darkView1 pt-[52px]">
+    <div className="bg-white pt-[52px] dark:bg-darkView1">
       <div className="sticky top-0 flex h-screen flex-col justify-center py-12">
         <div className="w-28 py-5 px-0 text-center">
           <ToggleSwitch onClick={() => changeCurrentTheme(currentTheme === 'light' ? 'dark' : 'light')} />
@@ -66,7 +63,9 @@ const Sidebar = () => {
                     style={({isActive}) => ({
                       backgroundColor: isActive ? '#FFB400' : '#767676',
                     })}>
-                    <Tooltip content={items.title}>{items.icon}</Tooltip>
+                    <Tooltip content={items.title}>
+                      {items.icon}
+                    </Tooltip>
                   </NavLink>
                 </li>
               )
