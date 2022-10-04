@@ -9,7 +9,7 @@ import {Scrollbars} from 'react-custom-scrollbars-2'
 
 const Aside = () => {
   return (
-    <aside className="w-[305px] bg-white dark:bg-darkView1">
+    <aside className="w-[305px] shadow-mainContainer bg-white dark:bg-darkView1">
       <div className="sticky top-0 flex flex-col gap-6 px-10">
         <Profile />
         <Scrollbars
@@ -25,8 +25,8 @@ const Aside = () => {
           <ExtraSkills />
           <hr className="mt-6 h-px w-full border-none bg-lightBg" />
         </Scrollbars>
-        <Button className="darkMode-text">
-          Download cv
+        <Button color='third' className="darkMode-text">
+          РЕЗЮМЕ
           <DownloadIcon className="h-3 w-3 dark:fill-white" color="fill-lightDark" />
         </Button>
       </div>

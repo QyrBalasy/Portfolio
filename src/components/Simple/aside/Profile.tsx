@@ -16,8 +16,8 @@ const Profile = () => {
       <div className="xs:h-[150px] bg-stone-400 mx-auto mt-12 mb-7 w-[150px] overflow-hidden rounded-[50%] text-center">
         <img alt="profile icon" src={profileImg} />
       </div>
-      <h4 className="text-lg darkMode-text mb-4 text-center font-medium">Sungat Shakarim</h4>
-      <p className="text-mainTextColor text-base mb-4 text-center font-normal">Font-end Developer</p>
+      <h4 className="text-lg darkMode-text mb-4 text-center font-medium">Сунгат Шакарим</h4>
+      <p className="text-mainTextColor text-base mb-4 text-center font-normal">Фронтэнд разработчик</p>
       <ul className="flex justify-between  ">
         <li className="flex h-6 w-6 items-center justify-center rounded-[50%] bg-yellow  ">
           <a href="https://www.facebook.com/profile.php?id=100035914818991" target={'_blank'} rel="noreferrer">

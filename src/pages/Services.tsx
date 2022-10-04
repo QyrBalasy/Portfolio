@@ -10,10 +10,9 @@ const Services = () => {
     <section>
       <div className="flex flex-col gap-y-12">
         <div className="mx-auto w-96 text-center">
-          <h2 className="text-headline3XL">My services</h2>
+          <h2 className="text-headline3XL dark:text-whiteFont">Мои навыки</h2>
           <p className="mt-6">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim
-            velit mollit. lorem ipsum
+            В данном разделе приведены, мои ключевые навыки с которыми мы можем взаимодействовать с вами!
           </p>
         </div>
         <ItemCard />
@@ -27,35 +26,35 @@ export default Services
 const ItemCard = () => {
   return (
     <div className="grid grid-cols-3 gap-5">
-      <div className="flex min-h-[225px] cursor-pointer flex-col items-center justify-center gap-4 bg-darkView1">
-        <WebDevelopmentIcon className="w-12" />
-        <h4 className="text-headlineLG">Web development</h4>
-        <p>blog, e-commerce</p>
+      <div className="flex min-h-[225px] cursor-pointer flex-col items-center justify-center gap-4 bg-white dark:bg-darkView1">
+        <WebDevelopmentIcon className="w-12" color="#FFB400" />
+        <h4 className="text-headlineLG dark:text-whiteFont">Вэб разработка</h4>
+        <p>Блог, электронная коммерция</p>
       </div>
-      <div className="flex min-h-[225px] cursor-pointer flex-col items-center justify-center gap-4 bg-darkView1">
-        <UxUiDesignIcon className="w-12" />
-        <h4 className="text-headlineLG">UI/UX design</h4>
-        <p>Mobile app, website design</p>
+      <div className="flex min-h-[225px] cursor-pointer flex-col items-center justify-center gap-4 bg-white dark:bg-darkView1">
+        <UxUiDesignIcon className="w-12" color="#FFB400" />
+        <h4 className="text-headlineLG dark:text-whiteFont">UI/UX дизайн</h4>
+        <p>Дизайн вэб сайтов и мобильных приложении</p>
       </div>
-      <div className="flex min-h-[225px] cursor-pointer flex-col items-center justify-center gap-4 bg-darkView1">
-        <SoundDesignIcon className="w-12" />
-        <h4 className="text-headlineLG">Sound design</h4>
-        <p>Voice Over, Beat Making</p>
+      <div className="flex min-h-[225px] cursor-pointer flex-col items-center justify-center gap-4 bg-white dark:bg-darkView1">
+        <SoundDesignIcon className="w-12" color="#FFB400" />
+        <h4 className="text-headlineLG dark:text-whiteFont">Контекстная реклама</h4>
+        <p>Google, Yandex</p>
       </div>
-      <div className="flex min-h-[225px] cursor-pointer flex-col items-center justify-center gap-4 bg-darkView1">
-        <PhotographerIcon className="w-12" />
-        <h4 className="text-headlineLG">Photography</h4>
-        <p>portrait, product photography</p>
+      <div className="flex min-h-[225px] cursor-pointer flex-col items-center justify-center gap-4 bg-white dark:bg-darkView1">
+        <PhotographerIcon className="w-12" color="#FFB400" />
+        <h4 className="text-headlineLG dark:text-whiteFont">Фотографии</h4>
+        <p>Продуктовые съёмки</p>
       </div>
-      <div className="flex min-h-[225px] cursor-pointer flex-col items-center justify-center gap-4 bg-darkView1">
-        <VideoEditingIcon className="w-12" />
-        <h4 className="text-headlineLG">Video editing</h4>
-        <p>Instagram reels, tiktok videos</p>
+      <div className="flex min-h-[225px] cursor-pointer flex-col items-center justify-center gap-4 bg-white dark:bg-darkView1">
+        <VideoEditingIcon className="w-12" color="#FFB400" />
+        <h4 className="text-headlineLG dark:text-whiteFont">Монтаж видео</h4>
+        <p>Видеоролики для соц-сетей</p>
       </div>
-      <div className="flex min-h-[225px] cursor-pointer flex-col items-center justify-center gap-4 bg-darkView1">
-        <InternetMarketingIcon className="w-12" />
-        <h4 className="text-headlineLG">Internet marketing</h4>
-        <p>SMM, Targeting</p>
+      <div className="flex min-h-[225px] cursor-pointer flex-col items-center justify-center gap-4 bg-white dark:bg-darkView1">
+        <InternetMarketingIcon className="w-12" color="#FFB400" />
+        <h4 className="text-headlineLG dark:text-whiteFont">Джитал маркетинг</h4>
+        <p>СММ, Таргетинг, Копирайтинг</p>
       </div>
     </div>
   )

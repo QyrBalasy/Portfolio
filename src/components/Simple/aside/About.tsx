@@ -14,21 +14,21 @@ const About = () => {
   return (
     <div className="my-6 flex flex-col gap-y-2.5">
       <div className="flex justify-between">
-        <p className="darkMode-text bg-yellow px-2 py-0.5 text-default">Age:</p>
+        <p className="darkMode-text bg-yellow px-2 py-0.5 text-default">Возраст:</p>
         <span className="darkMode-text">{currentAge}</span>
       </div>
       <div className="flex justify-between">
-        <p className="darkMode-text bg-yellow px-2 py-0.5 text-default">Residence:</p>
+        <p className="darkMode-text bg-yellow px-2 py-0.5 text-default">Резиденство:</p>
         <span className="darkMode-text">KZ</span>
       </div>
       <div className="flex justify-between">
-        <p className="darkMode-text bg-yellow px-2 py-0.5 text-default">Freelance:</p>
-        <span className="darkMode-text">Available</span>
+        <p className="darkMode-text bg-yellow px-2 py-0.5 text-default">Фриланс:</p>
+        <span className="darkMode-text">Доступен</span>
       </div>
       <div className="flex justify-between whitespace-nowrap">
-        <p className="darkMode-text bg-yellow px-2 py-0.5 text-default">Address:</p>
+        <p className="darkMode-text bg-yellow px-2 py-0.5 text-default">Адрес:</p>
         <a href="https://goo.gl/maps/PqnuS8gEGmBwtuVY8" target={'_blank'} rel="noreferrer" className="darkMode-text">
-          Almaty
+          Алматы
         </a>
       </div>
     </div>

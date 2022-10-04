@@ -15,43 +15,47 @@ type SidebarDataT = {
 const Sidebar = () => {
   const SidebarData: SidebarDataT[] = [
     {
-      title: 'Home',
+      title: 'Главная',
       path: PathsMap.root.get(),
       icon: <HomeIcon className="h-8 w-8 p-2" />,
     },
     {
-      title: 'Service',
+      title: 'Сервисы',
       path: PathsMap.services.get(),
       icon: <CodeIcon className="h-8 w-8  p-2" />,
     },
     {
-      title: 'Cv',
+      title: 'Резюме',
       path: PathsMap.cv.get(),
       icon: <GraduationCapIcon className="h-8 w-8 p-2" />,
     },
     {
-      title: 'Portfolio',
+      title: 'Портфолио',
       path: PathsMap.portfolio.get(),
       icon: <BriefcaseIcon className="h-8 w-8 p-2" />,
     },
     {
-      title: 'Blog',
+      title: 'Блог',
       path: PathsMap.blog.get(),
       icon: <PenIcon className="h-8 w-8 p-2" />,
     },
     {
-      title: 'Contact',
+      title: 'Контакты',
       path: PathsMap.contact.get(),
       icon: <CommentsIcon className="h-8 w-8 p-2" />,
     },
   ]
   const {currentTheme, changeCurrentTheme} = React.useContext(ThemeContext)
   return (
-    <div className="bg-white pt-[52px] dark:bg-darkView1">
+    <div className="bg-white pt-[52px] shadow-mainContainer dark:bg-darkView1">
       <div className="sticky top-0 flex h-screen flex-col justify-center py-12">
         <div className="w-28 py-5 px-0 text-center">
           <ToggleSwitch onClick={() => changeCurrentTheme(currentTheme === 'light' ? 'dark' : 'light')} />
         </div>
+        <div className="w-28 py-5 px-0 text-center">
+          <p>Русский,Англ</p>
+        </div>
+
         <nav>
           <ul className="flex w-28 flex-col gap-10 ">
             {SidebarData.map((items, index) => {
@@ -63,9 +67,7 @@ const Sidebar = () => {
                     style={({isActive}) => ({
                       backgroundColor: isActive ? '#FFB400' : '#767676',
                     })}>
-                    <Tooltip content={items.title}>
-                      {items.icon}
-                    </Tooltip>
+                    <Tooltip content={items.title}>{items.icon}</Tooltip>
                   </NavLink>
                 </li>
               )
@@ -77,5 +79,3 @@ const Sidebar = () => {
   )
 }
 export default Sidebar
-
-

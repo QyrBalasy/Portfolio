@@ -4,27 +4,27 @@ import ProgressBar, {ProgressBarDataType} from '../../UI/ProgressBar'
 
 const ProgressBarData: ProgressBarDataType[] = [
   {
-    Title: 'Soft Skills',
+    Title: 'Софт скиллы',
     Content: [
       {
-        description: 'Kazakh',
+        description: 'Казахский',
         fill: '100',
         completed: '100',
       },
       {
-        description: 'Russian',
+        description: 'Русский',
         fill: '100',
         completed: '100',
       },
       {
-        description: 'English',
+        description: 'Английский',
         fill: '60',
         completed: '60',
       },
     ],
   },
   {
-    Title: 'Hard Skills',
+    Title: 'Хард Скиллы',
     Content: [
       {
         description: 'Html',
@@ -93,7 +93,7 @@ export const ExtraSkills = () => {
   return (
     <div className="my-6">
       <ul>
-        <h4 className="darkMode-text mb-4 text-headlineLG">Extra Skills</h4>
+        <h4 className="darkMode-text mb-4 text-headlineLG">Прочие навыки</h4>
         {/* Эту хуету переписать надо */}
         <li className="flex items-center justify-start gap-x-4">
           <CloneIcon className="h-4 w-4" />
@@ -109,7 +109,7 @@ export const ExtraSkills = () => {
         </li>
         <li className="flex items-center justify-start  gap-x-4">
           <CloneIcon className="h-4 w-4" />
-          <p className="text-paragraphFont dark:text-whiteFont">GIT Knowledge</p>
+          <p className="text-paragraphFont dark:text-whiteFont">Git, GitLab</p>
         </li>
         <li className="flex items-center justify-start  gap-x-4">
           <CloneIcon className="h-4 w-4" />
