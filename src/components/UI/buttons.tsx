@@ -1,22 +1,35 @@
 import styled, { css } from "styled-components";
 
 type ButtonProps = {
-  color?: 'primary' | 'secondary'
-  size?: 'default' | 'big'
+  color?: 'primary' | 'secondary' | 'third'
+  
 }
 
 export const Button = styled.button<ButtonProps>`
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-radius: 5px;
   background-color: #ffb400;
-  width: 220px;
+  width: 160px;
   display: flex;
   align-items: center;
   gap: 15px;
   justify-content: center;
-  font-size:14px;
-  font-weight: 600;
-  line-height: 17px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  &:hover {
+    background-color: #f1ba3a;
+  }
+  &:active {
+    background-color: #ae7c07;
+    /* color: var(--text-white); */
+  }
+  &:disabled {
+    background-color: var(--element-blocked);
+    color: var(--text-white);
+    cursor: auto;
+  }
   ${props =>
     props.color === 'primary' &&
     css`
@@ -27,5 +40,14 @@ export const Button = styled.button<ButtonProps>`
     css`
       padding: 8px 32px;
       border-radius: 30px;
+      box-shadow: rgba(4, 4, 4, 0.1) 4px 0px 10px;
+    `};
+  ${props =>
+    props.color === 'third' &&
+    css`
+      border-radius: 0;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      width: 100%;
     `};
 `

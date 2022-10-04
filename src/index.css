@@ -11,6 +11,10 @@
   box-sizing: border-box;
 }
 
+*:focus{
+  outline: 1px solid #FFB400;
+}
+
 html,
 body {
   height: 100%;
