@@ -1,5 +1,6 @@
 import React from 'react'
 import Footer from '../../components/footer'
+import Contacts from '../../pages/Contacts'
 import Education from '../../pages/Education'
 import HomePage from '../../pages/HomePage'
 import MyPortfolios from '../../pages/MyPortfolios'
@@ -18,6 +19,7 @@ const Home = () => {
       <Education />
       <WorkHistory />
       <MyPortfolios />
+      <Contacts />
       <Footer />
     </div>
   )
