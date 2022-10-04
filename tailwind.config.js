@@ -53,6 +53,9 @@ module.exports = {
       lightDark: '#2B2B2B',
       yellow: '#FFB400',
     },
+    boxShadow: {
+      mainContainer: 'rgba(47, 122, 249, 0.1) 4px 0px 10px;',
+    },
   },
   plugins: [],
   darkMode: 'class',
