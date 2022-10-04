@@ -2,15 +2,16 @@ import React from 'react'
 import PricePlans from '../../pages/PricePlans'
 import Services from '../../pages/Services'
 import Footer from '../../components/footer'
+import Containers from '../../components/UI/Containers'
 
 
 const MyServices = () => {
   return (
-    <div className="flex flex-col gap-y-16">
+    <Containers>
       <Services />
       <PricePlans />
       <Footer/>
-    </div>
+    </Containers>
   )
 }
 export default MyServices

@@ -1,17 +1,18 @@
 import React from 'react'
 import Footer from '../../components/footer'
+import Containers from '../../components/UI/Containers'
 import Education from '../../pages/Education'
 import WorkHistory from '../../pages/WorkHistory'
 import Certificates from '../../pages/Сertificates'
 
 const Cv = () => {
   return (
-    <div className="flex flex-col gap-y-16">
+    <Containers>
       <Education />
       <WorkHistory />
       <Certificates />
       <Footer />
-    </div>
+    </Containers>
   )
 }
 export default Cv
