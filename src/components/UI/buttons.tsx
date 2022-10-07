@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 type ButtonProps = {
-  color?: 'primary' | 'secondary' | 'third'
+  color?: 'primary' | 'secondary' | 'third' | 'empty'
   
 }
 
@@ -49,5 +49,16 @@ export const Button = styled.button<ButtonProps>`
       padding-top: 10px;
       padding-bottom: 10px;
       width: 100%;
+    `};
+  ${props =>
+    props.color === 'empty' &&
+    css`
+      background-color: transparent;
+      outline: none;
+      width: 100%;
+      &:hover {
+        background-color: transparent;
+      }
+      
     `};
 `
