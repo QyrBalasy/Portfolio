@@ -1,7 +1,14 @@
 import React from 'react'
-import { InternetMarketingIcon, PhotographerIcon, SoundDesignIcon, UxUiDesignIcon, VideoEditingIcon, WebDevelopmentIcon } from '../assets/icons/Icons'
-import {Button} from '../components/UI/buttons'
-import basicImg from '../media/imgs/man-img.png'
+import {
+  InternetMarketingIcon,
+  PhotographerIcon,
+  SoundDesignIcon,
+  UxUiDesignIcon,
+  VideoEditingIcon,
+  WebDevelopmentIcon,
+} from '../assets/icons/Icons'
+import { Button } from '../components/UI/buttons'
+import Cards from '../components/UI/cards'
 
 //TODO: вынести в отдельный компонент карточек и передавать значения пропсами
 
@@ -22,40 +29,56 @@ const Services = () => {
 }
 export default Services
 
-
 const ItemCard = () => {
+  const ItemCardData = [
+    {
+      icon: <WebDevelopmentIcon className="w-12" color="#FFB400" />,
+      Title: 'Вэб разработка',
+      description: 'Блог, электронная коммерция',
+    },
+    {
+      icon: <UxUiDesignIcon className="w-12" color="#FFB400" />,
+      Title: 'UI/UX дизайн',
+      description: 'Дизайн вэб сайтов и мобильных приложении',
+    },
+    {
+      icon: <SoundDesignIcon className="w-12" color="#FFB400" />,
+      Title: 'Контекстная реклама',
+      description: 'Google, Yandex',
+    },
+    {
+      icon: <PhotographerIcon className="w-12" color="#FFB400" />,
+      Title: 'Фотографии',
+      description: 'Продуктовые съёмка',
+
+    },
+    {
+      icon: <VideoEditingIcon className="w-12" color="#FFB400" />,
+      Title: 'Монтаж видео',
+      description: 'Видеоролики для соц-сетей',
+    },
+    {
+      icon: <InternetMarketingIcon className="w-12" color="#FFB400" />,
+      Title: 'Джитал маркетинг',
+      description: 'СММ, Таргетинг, Копирайтинг',
+    },
+  ]
   return (
     <div className="grid grid-cols-3 gap-5">
-      <div className="flex min-h-[225px] cursor-pointer flex-col items-center justify-center gap-4 bg-white dark:bg-darkView1">
-        <WebDevelopmentIcon className="w-12" color="#FFB400" />
-        <h4 className="text-headlineLG dark:text-whiteFont">Вэб разработка</h4>
-        <p>Блог, электронная коммерция</p>
-      </div>
-      <div className="flex min-h-[225px] cursor-pointer flex-col items-center justify-center gap-4 bg-white dark:bg-darkView1">
-        <UxUiDesignIcon className="w-12" color="#FFB400" />
-        <h4 className="text-headlineLG dark:text-whiteFont">UI/UX дизайн</h4>
-        <p>Дизайн вэб сайтов и мобильных приложении</p>
-      </div>
-      <div className="flex min-h-[225px] cursor-pointer flex-col items-center justify-center gap-4 bg-white dark:bg-darkView1">
-        <SoundDesignIcon className="w-12" color="#FFB400" />
-        <h4 className="text-headlineLG dark:text-whiteFont">Контекстная реклама</h4>
-        <p>Google, Yandex</p>
-      </div>
-      <div className="flex min-h-[225px] cursor-pointer flex-col items-center justify-center gap-4 bg-white dark:bg-darkView1">
-        <PhotographerIcon className="w-12" color="#FFB400" />
-        <h4 className="text-headlineLG dark:text-whiteFont">Фотографии</h4>
-        <p>Продуктовые съёмки</p>
-      </div>
-      <div className="flex min-h-[225px] cursor-pointer flex-col items-center justify-center gap-4 bg-white dark:bg-darkView1">
-        <VideoEditingIcon className="w-12" color="#FFB400" />
-        <h4 className="text-headlineLG dark:text-whiteFont">Монтаж видео</h4>
-        <p>Видеоролики для соц-сетей</p>
-      </div>
-      <div className="flex min-h-[225px] cursor-pointer flex-col items-center justify-center gap-4 bg-white dark:bg-darkView1">
-        <InternetMarketingIcon className="w-12" color="#FFB400" />
-        <h4 className="text-headlineLG dark:text-whiteFont">Джитал маркетинг</h4>
-        <p>СММ, Таргетинг, Копирайтинг</p>
-      </div>
+      {ItemCardData.map((item, key) => {
+        return (
+          <Cards className="bg-white dark:bg-darkView1" key={key}>
+            <div>
+              {item.icon}
+              <h4 className="text-headlineLG dark:text-whiteFont">{item.Title}</h4>
+            </div>
+            <div>
+              <p>{item.description}</p>
+              <Button color="secondary">перейти</Button>
+            </div>
+          </Cards>
+        )
+      })}
     </div>
   )
 }
