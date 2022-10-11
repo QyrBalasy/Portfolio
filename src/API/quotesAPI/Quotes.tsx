@@ -35,7 +35,7 @@ const Quotes: FC<QuoteType> = () => {
       </div>
       <div className="basis-11/12 text-right">
         <h4 className="text-headlineLG dark:text-whiteFont ">{quote.text}</h4>
-        <hr className="my-1 h-0.5 bg-gradient-to-l from-yellow" />
+        <hr className="border-0 my-1 h-0.5 bg-gradient-to-l from-yellow" />
         <p className="text-default text-paragraphFont"> {quote.author}</p>
       </div>
     </div>

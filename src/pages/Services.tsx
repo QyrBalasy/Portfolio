@@ -73,7 +73,7 @@ const ItemCard = () => {
               <h4 className="text-headlineLG dark:text-whiteFont">{item.Title}</h4>
             </div>
             <div>
-              <p>{item.description}</p>
+              <p className="text-lightDark dark:text-whiteFont">{item.description}</p>
               <Button color="secondary">перейти</Button>
             </div>
           </Cards>

@@ -15,8 +15,7 @@ const Recomendations = () => {
         <div className="mx-auto w-96 text-center ">
           <h2 className="text-headline3XL dark:text-whiteFont">Рекомендации</h2>
           <p className="mt-6">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim
-            velit mollit. lorem ipsum
+            Отзывы, рекомендации коллег и клиентов
           </p>
         </div>
         <SwiperSliderComponent />
@@ -34,16 +33,9 @@ const SwiperSliderComponent = () => {
         spaceBetween={50}
         slidesPerView={1}
         pagination
-        
         className={'h-[370px]'}
         onSlideChange={() => console.log('slider changed')}
         onSwiper={swiper => console.log(swiper)}>
-        <SwiperSlide>
-          <RecomendationItems />
-        </SwiperSlide>
-        <SwiperSlide>
-          <RecomendationItems />
-        </SwiperSlide>
         <SwiperSlide>
           <RecomendationItems />
         </SwiperSlide>
