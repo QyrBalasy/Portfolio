@@ -3,8 +3,9 @@ import {useNavigate} from 'react-router-dom'
 import Quotes from '../API/quotesAPI/Quotes'
 import {ArrowRightIcon} from '../assets/icons/Icons'
 import {Button} from '../components/UI/buttons'
-import basicImg from '../media/imgs/man-img.png'
+// import basicImg from '../media/imgs/man-img.png'
 import {PathsMap} from '../routes/routerPaths'
+import Scene from '../Scene'
 
 const HomePage = () => {
   const PushButton = useNavigate()
@@ -22,7 +23,8 @@ const HomePage = () => {
           </Button>
         </article>
         <div className="basis-1/3">
-          <img src={basicImg} className="w-full" alt="HomePageImg" />
+          {/* <img src={basicImg} className="w-full" alt="HomePageImg" /> */}
+          <Scene />
         </div>
       </div>
     </section>
