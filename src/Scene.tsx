@@ -6,7 +6,7 @@ import { Model } from './model'
 const Scene = () => {
   return (
     <Canvas
-      camera={{position: [2, 0, 12.25], fov: 10}}
+      camera={{position: [0, 3, 9], fov: 14}}
       style={{
         backgroundColor: 'transparent',
         width: '100%',
@@ -16,8 +16,7 @@ const Scene = () => {
       <ambientLight intensity={0.1} />
       <directionalLight intensity={0.4} />
       <Suspense fallback={null}>
-        {/* <Model position={[0.025, -0.9, 0]} /> */}
-        <Model position={[0.025, -0.9, 0]} />
+        <Model position={[0, -0.5, 0]} />
       </Suspense>
       <OrbitControls />
     </Canvas>
