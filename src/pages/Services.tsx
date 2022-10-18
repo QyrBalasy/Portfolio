@@ -1,8 +1,8 @@
 import React from 'react'
 import {
+  AdvertisingIcon,
   InternetMarketingIcon,
   PhotographerIcon,
-  SoundDesignIcon,
   UxUiDesignIcon,
   VideoEditingIcon,
   WebDevelopmentIcon,
@@ -10,12 +10,10 @@ import {
 import { Button } from '../components/UI/buttons'
 import Cards from '../components/UI/cards'
 
-//TODO: вынести в отдельный компонент карточек и передавать значения пропсами
-
 const Services = () => {
   return (
     <section>
-      <div className="flex flex-col gap-y-12">
+      <div className="flex flex-col gap-y-12 ">
         <div className="mx-auto w-96 text-center">
           <h2 className="text-headline3XL dark:text-whiteFont">Мои навыки</h2>
           <p className="mt-6">
@@ -42,7 +40,7 @@ const ItemCard = () => {
       description: 'Дизайн вэб сайтов и мобильных приложении',
     },
     {
-      icon: <SoundDesignIcon className="w-12" color="#FFB400" />,
+      icon: <AdvertisingIcon className="w-12" color="#FFB400" />,
       Title: 'Контекстная реклама',
       description: 'Google, Yandex',
     },
@@ -50,7 +48,6 @@ const ItemCard = () => {
       icon: <PhotographerIcon className="w-12" color="#FFB400" />,
       Title: 'Фотографии',
       description: 'Продуктовые съёмка',
-
     },
     {
       icon: <VideoEditingIcon className="w-12" color="#FFB400" />,
@@ -74,7 +71,9 @@ const ItemCard = () => {
             </div>
             <div>
               <p className="text-lightDark dark:text-whiteFont">{item.description}</p>
-              <Button color="secondary">перейти</Button>
+              <Button color="secondary" >
+                перейти
+              </Button>
             </div>
           </Cards>
         )

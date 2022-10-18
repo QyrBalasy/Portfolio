@@ -85,11 +85,11 @@ const PriceCard: FC<PriceCardType> = props => {
       <p>{props.description}</p>
       <CardFeatures data={props.data} />
       {props.mostPopular ? (
-        <Button color="secondary" className="mt-auto">
+        <Button color="secondary" className="mx-auto mt-auto">
           order me
         </Button>
       ) : (
-        <Button color="primary" className="mt-auto">
+        <Button color="primary" className="mx-auto mt-auto">
           order me
         </Button>
       )}
