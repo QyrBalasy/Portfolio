@@ -37,6 +37,7 @@ const CardsWrapper = styled.div`
     justify-content: center;
     text-align: center;
     align-items: center;
+    padding: 15px;
   }
   &:hover div:nth-child(2) {
     transform: perspective(2000px) rotateY(0deg);

@@ -2,7 +2,6 @@ import styled, { css } from "styled-components";
 
 type ButtonProps = {
   color?: 'primary' | 'secondary' | 'third' | 'empty'
-  
 }
 
 export const Button = styled.button<ButtonProps>`
@@ -18,12 +17,12 @@ export const Button = styled.button<ButtonProps>`
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
+  transition: all ease .5s;
   &:hover {
-    background-color: #f1ba3a;
+    background-color: #fad783;
   }
   &:active {
     background-color: #ae7c07;
-    /* color: var(--text-white); */
   }
   &:disabled {
     background-color: var(--element-blocked);
@@ -41,6 +40,7 @@ export const Button = styled.button<ButtonProps>`
       padding: 8px 32px;
       border-radius: 30px;
       box-shadow: rgba(4, 4, 4, 0.1) 4px 0px 10px;
+      background-color: #ffffff;
     `};
   ${props =>
     props.color === 'third' &&
@@ -59,6 +59,5 @@ export const Button = styled.button<ButtonProps>`
       &:hover {
         background-color: transparent;
       }
-      
     `};
 `

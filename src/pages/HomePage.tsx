@@ -3,7 +3,6 @@ import {useNavigate} from 'react-router-dom'
 import Quotes from '../API/quotesAPI/Quotes'
 import {ArrowRightIcon} from '../assets/icons/Icons'
 import {Button} from '../components/UI/buttons'
-// import basicImg from '../media/imgs/man-img.png'
 import {PathsMap} from '../routes/routerPaths'
 import Scene from '../Scene'
 
@@ -17,13 +16,12 @@ const HomePage = () => {
           <h1 className="text-headline5XL dark:text-whiteFont">
             Привет! Я Сунгат - <span className="text-yellow">Фронтенд </span> разработчик
           </h1>
-          <Quotes/>
-          <Button onClick={() => PushButton(PathsMap.contact.get())}>
-            КОНТАКТЫ <ArrowRightIcon className="h-3 w-3" color="bg-darkBg" />
+          <Quotes />
+          <Button className="darkMode-text" onClick={() => PushButton(PathsMap.contact.get())}>
+            КОНТАКТЫ <ArrowRightIcon className="h-3 w-3 dark:fill-white" color="fill-darkBg" />
           </Button>
         </article>
         <div className="basis-1/3">
-          {/* <img src={basicImg} className="w-full" alt="HomePageImg" /> */}
           <Scene />
         </div>
       </div>
