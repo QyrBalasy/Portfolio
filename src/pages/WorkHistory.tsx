@@ -7,10 +7,6 @@ const WorkHistory = () => {
       <div className="flex flex-col gap-y-12 ">
         <div className="mx-auto w-96 text-center ">
           <h2 className="text-headline3XL dark:text-whiteFont">Опыт работы</h2>
-          <p className="mt-6">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim
-            velit mollit. lorem ipsum
-          </p>
         </div>
         <WorkHistoryList />
       </div>
@@ -22,17 +18,20 @@ export default WorkHistory
 const WorkHistoryList = () => {
   return (
     <div className="flex flex-col gap-7 divide-y divide-whiteFont bg-white py-10 px-8 dark:bg-darkView1">
-      <div className="flex justify-between">
+      <div className="flex justify-between gap-x-5">
         <div className="basis-1/3">
           <h4 className="pb-6 text-headlineLG dark:text-whiteFont">ТОО "Mybuh.kz"</h4>
-          <span className="flex gap-5">
-            <p>Фронтэнд разработчик</p>
-            <Badge>01.05.2022 - 12.09.2022</Badge>
+          <span className="flex gap-x-1">
+            <p className="basis-2/5">Фронтэнд разработчик</p>
+            <p className="darkMode-text self-center bg-yellow px-2 py-0.5 text-defaultXS">01.05.2022 - 12.09.2022</p>
           </span>
         </div>
         <div className="basis-2/3">
           <h4 className="pb-6 text-headlineLG dark:text-whiteFont">
-            Поддержка и развитие вэб-сервиса: cabinet.mybuh.kz
+            Поддержка и развитие вэб-сервиса: &nbsp;
+            <a href="https://cabinet.mybuh.kz/login/" className="underline" target={'_blank'} rel="noreferrer">
+              cabinet.mybuh.kz
+            </a>
           </h4>
           <ul>
             <li>
@@ -50,16 +49,21 @@ const WorkHistoryList = () => {
           </ul>
         </div>
       </div>
-      <div className="flex justify-between ">
+      <div className="flex justify-between gap-x-5">
         <div className="basis-1/3">
           <h4 className="pb-6 text-headlineLG dark:text-whiteFont">ТОО "Mybuh.kz"</h4>
-          <span className="flex gap-5">
-            <p>Вэб разработчик</p>
-            <Badge>08.10.2021 - 01.05.2022</Badge>
+          <span className="flex gap-x-1">
+            <p className="basis-2/5">Вэб разработчик</p>
+            <p className="darkMode-text self-center bg-yellow px-2 py-0.5 text-defaultXS">08.10.2021 - 01.05.2022</p>
           </span>
         </div>
         <div className="basis-2/3">
-          <h4 className="pb-6 text-headlineLG dark:text-whiteFont">Поддержка и развитие сайта: mybuh.kz</h4>
+          <h4 className="pb-6 text-headlineLG dark:text-whiteFont">
+            Поддержка и развитие сайта: &nbsp;
+            <a href="https://mybuh.kz/" className="underline" target={'_blank'} rel="noreferrer">
+              mybuh.kz
+            </a>
+          </h4>
           <ul>
             <p>Занимался поддержкой и развитием сайта mybuh.kz:</p>
             <li>
@@ -83,12 +87,12 @@ const WorkHistoryList = () => {
           </ul>
         </div>
       </div>
-      <div className="flex justify-between ">
+      <div className="flex justify-between gap-x-5">
         <div className="basis-1/3">
           <h4 className="pb-6 text-headlineLG dark:text-whiteFont">КГУ "Государственный архив города Алматы"</h4>
           <span className="flex gap-5">
-            <p>Инженер-программист</p>
-            <Badge>01.04.2019 - 01.02.2022</Badge>
+            <p className="basis-2/5">Инженер-программист</p>
+            <p className="darkMode-text self-center bg-yellow px-2 py-0.5 text-defaultXS">01.04.2019 - 01.02.2022</p>
           </span>
         </div>
         <div className="basis-2/3">
@@ -103,10 +107,10 @@ const WorkHistoryList = () => {
               </p>
             </li>
             <li>
-              <p>
-                Организация приема и передачи данных между программным обеспечением ЭЕАД - e-Акимат; - Администрирование
-                операционных систем Windows;
-              </p>
+              <p>Организация приема и передачи данных между программным обеспечением ЭЕАД - e-Акимат;</p>
+            </li>
+            <li>
+              <p>Администрирование операционных систем Windows;</p>
             </li>
             <li>
               <p>Обеспечение бесперебойного функционирования серверного оборудования;</p>
