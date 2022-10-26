@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import {
   AdvertisingIcon,
   InternetMarketingIcon,
@@ -9,6 +10,7 @@ import {
 } from '../assets/icons/Icons'
 import { Button } from '../components/UI/buttons'
 import Cards from '../components/UI/cards'
+import { PathsMap } from '../routes/routerPaths'
 
 const Services = () => {
   return (
@@ -60,6 +62,7 @@ const ItemCard = () => {
       description: 'СММ, Таргетинг, Копирайтинг',
     },
   ]
+  const PushButton = useNavigate()
   return (
     <div className="grid grid-cols-3 gap-5">
       {ItemCardData.map((item, key) => {
@@ -71,7 +74,7 @@ const ItemCard = () => {
             </div>
             <div>
               <p className="text-lightDark dark:text-whiteFont">{item.description}</p>
-              <Button color="secondary" >
+              <Button color="secondary" onClick={() => PushButton(PathsMap.blog.get())}>
                 перейти
               </Button>
             </div>

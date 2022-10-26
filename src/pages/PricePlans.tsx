@@ -1,6 +1,8 @@
 import React, {FC} from 'react'
+import { useNavigate } from 'react-router-dom'
 import {CheckIcon} from '../assets/icons/Icons'
 import { Button } from '../components/UI/buttons'
+import { PathsMap } from '../routes/routerPaths'
 
 const PricePlans = () => {
   return (
@@ -37,41 +39,39 @@ type PriceCardType = {
 const cardsData: PriceCardType[] = [
   {
     type: 'silver',
-    title: 'silver',
-    description: 'For most businesses that want to optimize web queries',
-    price: 10.0,
+    title: 'серебрянный',
+    description: 'Верстка макета согласно дизайну и интеграция с АПИ',
+    price: 4.5,
     mostPopular: false,
-    data: ['UI Design', 'web development'],
+    data: ['Вэб-разработка'],
   },
   {
     type: 'gold',
-    title: 'gold',
-    description: 'For most businesses that want to optimize web queries',
-    price: 29.99,
+    title: 'золотой',
+    description: 'Для большинство компании который хотят редизайн своего сайта',
+    price: 6.5,
     mostPopular: true,
-    data: ['UI Design', 'web development', 'logo design', 'seo optimization'],
+    data: ['Вэб-дизайн', 'Вэб-разработка', 'SEO оптизимация'],
   },
   {
     type: 'diamond',
-    title: 'dimond',
-    description: 'For most businesses that want to optimize web queries',
-    price: 69.99,
+    title: 'алмазный',
+    description: 'Комплексная разработка под ключ',
+    price: 10.00,
     mostPopular: false,
     data: [
-      'UI Design',
-      'web development',
-      'logo design',
-      'seo optimization',
-      'wordPress integration',
-      '5 Websites',
-      'unlimited user',
-      '20 gB bandwith',
+      'Вэб-дизайн',
+      'Вэб-разработка',
+      'SEO оптизимация',
+      'Копирайтинг',
+      'Интеграция на CMS',
     ],
   },
 ]
 
 
 const PriceCard: FC<PriceCardType> = props => {
+  const PushButton = useNavigate()
   return (
     <div className="relative flex basis-1/3 flex-col gap-y-5 bg-white px-6 pt-12 pb-6 text-center dark:bg-darkView1">
       {props.mostPopular ? (
@@ -80,17 +80,17 @@ const PriceCard: FC<PriceCardType> = props => {
       <h3 className="text-headline2XL dark:text-whiteFont">{props.title}</h3>
       <span>
         <h2 className="text-headline3XL dark:text-whiteFont">${props.price}</h2>
-        <p>/hour</p>
+        <p>/ч</p>
       </span>
       <p>{props.description}</p>
       <CardFeatures data={props.data} />
       {props.mostPopular ? (
-        <Button color="secondary" className="mx-auto mt-auto">
-          order me
+        <Button color="secondary" className="mx-auto mt-auto" onClick={() => PushButton(PathsMap.contact.get())}>
+          связаться
         </Button>
       ) : (
-        <Button color="primary" className="mx-auto mt-auto">
-          order me
+        <Button color="primary" className="mx-auto mt-auto" onClick={() => PushButton(PathsMap.contact.get())}>
+          связаться
         </Button>
       )}
     </div>
