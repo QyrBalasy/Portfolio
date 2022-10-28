@@ -17,11 +17,11 @@ export default WorkHistory
 
 const WorkHistoryList = () => {
   return (
-    <div className="flex flex-col gap-7 divide-y divide-whiteFont bg-white py-10 px-8 dark:bg-darkView1">
+    <div className="flex flex-col gap-7 divide-y divide-lightBg bg-white py-10 px-8 dark:divide-white dark:bg-darkView1">
       <div className="flex justify-between gap-x-5">
         <div className="basis-1/3">
           <h4 className="pb-6 text-headlineLG dark:text-whiteFont">ТОО "Mybuh.kz"</h4>
-          <span className="flex gap-x-1">
+          <span className="flex justify-between gap-x-1">
             <p className="basis-2/5">Фронтэнд разработчик</p>
             <p className="darkMode-text self-center bg-yellow px-2 py-0.5 text-defaultXS">01.05.2022 - 12.09.2022</p>
           </span>
@@ -33,7 +33,7 @@ const WorkHistoryList = () => {
               cabinet.mybuh.kz
             </a>
           </h4>
-          <ul>
+          <ul className="list-decimal space-y-1 pl-5 marker:text-darkFont">
             <li>
               <p>Занимаюсь разработкой фронтовой части для нового вэб сервиса, переписываю компоненты.</p>
             </li>
@@ -49,10 +49,10 @@ const WorkHistoryList = () => {
           </ul>
         </div>
       </div>
-      <div className="flex justify-between gap-x-5">
+      <div className="flex justify-between gap-x-5 pt-7">
         <div className="basis-1/3">
           <h4 className="pb-6 text-headlineLG dark:text-whiteFont">ТОО "Mybuh.kz"</h4>
-          <span className="flex gap-x-1">
+          <span className="flex justify-between gap-x-1">
             <p className="basis-2/5">Вэб разработчик</p>
             <p className="darkMode-text self-center bg-yellow px-2 py-0.5 text-defaultXS">08.10.2021 - 01.05.2022</p>
           </span>
@@ -64,8 +64,7 @@ const WorkHistoryList = () => {
               mybuh.kz
             </a>
           </h4>
-          <ul>
-            <p>Занимался поддержкой и развитием сайта mybuh.kz:</p>
+          <ul className="list-decimal space-y-1 pl-5 marker:text-darkFont">
             <li>
               <p>Верстал макеты страниц по дизайну, чекал их на PixelPerfect, собирал верстку на GULP.</p>
             </li>
@@ -87,10 +86,10 @@ const WorkHistoryList = () => {
           </ul>
         </div>
       </div>
-      <div className="flex justify-between gap-x-5">
+      <div className="flex justify-between gap-x-5 pt-7">
         <div className="basis-1/3">
           <h4 className="pb-6 text-headlineLG dark:text-whiteFont">КГУ "Государственный архив города Алматы"</h4>
-          <span className="flex gap-5">
+          <span className="flex justify-between gap-5">
             <p className="basis-2/5">Инженер-программист</p>
             <p className="darkMode-text self-center bg-yellow px-2 py-0.5 text-defaultXS">01.04.2019 - 01.02.2022</p>
           </span>
@@ -99,7 +98,7 @@ const WorkHistoryList = () => {
           <h4 className="pb-6 text-headlineLG dark:text-whiteFont">
             Инженерные работы по обеспечению бесперебойной работы учреждения
           </h4>
-          <ul>
+          <ul className="list-decimal space-y-1 pl-5 marker:text-darkFont">
             <li>
               <p>
                 Разработка, внедрение, эксплуатация и модернизация программного обеспечения ЭЕАД (электронный архив
