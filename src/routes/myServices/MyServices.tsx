@@ -8,9 +8,9 @@ import Containers from '../../components/UI/Containers'
 const MyServices = () => {
   return (
     <Containers>
-      <Services />
-      <PricePlans />
-      <Footer/>
+        <Services />
+        <PricePlans />
+        <Footer />
     </Containers>
   )
 }

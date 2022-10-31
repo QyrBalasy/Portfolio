@@ -39,6 +39,13 @@ module.exports = {
           lineHeight: '24px',
         },
       ],
+      defaultXS: [
+        '10px',
+        {
+          fontWeight: 400,
+          lineHeight: '12px',
+        },
+      ],
     },
     colors: {
       white: '#ffff',

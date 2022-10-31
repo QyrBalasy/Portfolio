@@ -1,6 +1,5 @@
 import React from 'react'
 import Footer from '../../components/footer'
-import Containers from '../../components/UI/Containers'
 import Contacts from '../../pages/Contacts'
 import Education from '../../pages/Education'
 import HomePage from '../../pages/HomePage'
@@ -12,7 +11,7 @@ import WorkHistory from '../../pages/WorkHistory'
 
 const Home = () => {
   return (
-    <Containers>
+    <div className="flex flex-col gap-y-16">
       <HomePage />
       <Services />
       <PricePlans />
@@ -22,7 +21,7 @@ const Home = () => {
       <MyPortfolios />
       <Contacts />
       <Footer />
-    </Containers>
+    </div>
   )
 }
 export default Home

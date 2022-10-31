@@ -7,10 +7,6 @@ const Education = () => {
       <div className="flex flex-col gap-y-12 ">
         <div className="mx-auto w-96 text-center ">
           <h2 className="text-headline3XL dark:text-whiteFont">Образование</h2>
-          <p className="mt-6">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim
-            velit mollit. lorem ipsum
-          </p>
         </div>
         <EducationList />
       </div>
@@ -21,13 +17,13 @@ export default Education
 
 const EducationList = () => {
   return (
-    <div className="flex flex-col gap-7 divide-y divide-whiteFont bg-white py-10 px-8 dark:bg-darkView1">
-      <div className="flex justify-between">
+    <div className="flex flex-col gap-y-7 divide-y divide-lightBg bg-white py-10 px-8 dark:divide-white dark:bg-darkView1">
+      <div className="flex justify-between gap-x-5">
         <div className="basis-1/3">
           <h4 className="pb-6 text-headlineLG dark:text-whiteFont">КазНУ им.аль-Фараби</h4>
-          <span className="flex gap-5">
+          <span className="flex justify-between gap-5">
             <p>Магистратура</p>
-            <Badge>15.08.2017- 15.02.2019</Badge>
+            <p className="darkMode-text self-center bg-yellow px-2 py-0.5 text-defaultXS">15.08.2017- 15.02.2019</p>
           </span>
         </div>
         <div className="basis-2/3">
@@ -35,19 +31,17 @@ const EducationList = () => {
           <p>Обучался я на магистратуре по специальности: Радиотехника-Электроника и Телекоммуникации</p>
         </div>
       </div>
-      <div className="flex justify-between ">
+      <div className="flex justify-between gap-x-5 pt-7">
         <div className="basis-1/3">
           <h4 className="pb-6 text-headlineLG dark:text-whiteFont">АУЭС</h4>
-          <span className="flex gap-5">
+          <span className="flex justify-between gap-5">
             <p>Бакалавриат</p>
-            <Badge>01.09.2013 - 05.06.2017</Badge>
+            <p className="darkMode-text self-center bg-yellow px-2 py-0.5 text-defaultXS">01.09.2013 - 05.06.2017</p>
           </span>
         </div>
         <div className="basis-2/3">
           <h4 className="pb-6 text-headlineLG dark:text-whiteFont">Диплом об окончаии бакалавриата</h4>
-          <p>
-            Обучался я на бакалавриате по специальности: Вычислительная Техника и Программное Обеспечение
-          </p>
+          <p>Обучался я на бакалавриате по специальности: Вычислительная Техника и Программное Обеспечение</p>
         </div>
       </div>
     </div>

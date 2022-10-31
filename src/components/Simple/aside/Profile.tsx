@@ -5,7 +5,6 @@ import {
   InstagramIcon,
   LinkedinIcon,
   TelegramIcon,
-  YoutubeIcon,
 } from '../../../assets/icons/Icons'
 import profileImg from '../../../media/imgs/profileIcon.jpg'
 
@@ -18,7 +17,7 @@ const Profile = () => {
       </div>
       <h4 className="text-lg darkMode-text mb-4 text-center font-medium">Сунгат Шакарим</h4>
       <p className="text-mainTextColor text-base mb-4 text-center font-normal">Фронтэнд разработчик</p>
-      <ul className="flex justify-between  ">
+      <ul className="flex justify-center gap-x-4">
         <li className="flex h-6 w-6 items-center justify-center rounded-[50%] bg-yellow  ">
           <a href="https://www.facebook.com/profile.php?id=100035914818991" target={'_blank'} rel="noreferrer">
             <FacebookIcon className="mx-auto h-3 w-[7px]  dark:fill-white" color="fill-lightDark" />
@@ -44,11 +43,11 @@ const Profile = () => {
             <TelegramIcon className="mx-auto h-[9px] w-3  dark:fill-white" color="fill-lightDark" />
           </a>
         </li>
-        <li className="flex h-6 w-6 items-center justify-center rounded-[50%] bg-yellow text-center">
+        {/* <li className="flex h-6 w-6 items-center justify-center rounded-[50%] bg-yellow text-center">
           <a href="/#">
             <YoutubeIcon className="h-[9px] w-3  dark:fill-white" color="fill-lightDark" />
           </a>
-        </li>
+        </li> */}
       </ul>
     </div>
   )
