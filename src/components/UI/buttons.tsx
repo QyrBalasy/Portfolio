@@ -17,7 +17,7 @@ export const Button = styled.button<ButtonProps>`
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
-  transition: all ease .5s;
+  transition: all ease 0.5s;
   &:hover {
     background-color: #fad783;
   }
@@ -27,7 +27,7 @@ export const Button = styled.button<ButtonProps>`
   &:disabled {
     background-color: var(--element-blocked);
     color: var(--text-white);
-    cursor: auto;
+    cursor: not-allowed;
   }
   ${props =>
     props.color === 'primary' &&

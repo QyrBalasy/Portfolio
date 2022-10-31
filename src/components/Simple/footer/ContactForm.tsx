@@ -17,7 +17,7 @@ const ContactForm = () => {
             <label className="text-sm text-gray-900 dark:text-gray-300 mb-2 block font-medium">Subject</label>
             <input
               type={'email'}
-              className="text-sm text-gray-900 bg-gray-50 border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light block w-full rounded-lg border-0 border p-3 dark:text-white"
+              className="text-sm text-gray-900 bg-gray-50 border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light block w-full rounded-lg  border p-3 dark:text-white"
               placeholder={'Let us know how we can help you'}
               required
             />
@@ -27,7 +27,7 @@ const ContactForm = () => {
             <textarea
               id="message"
               rows={6}
-              className="text-sm text-gray-900 bg-gray-50 shadow-sm border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-primary-500 dark:focus:border-primary-500 block w-full rounded-lg border-0 border p-2.5 dark:text-white"
+              className="text-sm text-gray-900 bg-gray-50 shadow-sm border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-primary-500 dark:focus:border-primary-500 block w-full rounded-lg  border p-2.5 dark:text-white"
               placeholder={'Leave a comment...'}
             />
           </div>
